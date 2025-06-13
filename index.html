@@ -26,31 +26,27 @@
       align-items: center;
     }
 
-    header .socials a {
-      color: #fff;
-      margin-right: 15px;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
+    header .socials {
+      display: flex;
+      align-items: center;
     }
 
-    header .socials a:hover {
-      color: #ff0000;
+    header .nav-links {
+      display: flex;
+      align-items: center;
     }
 
-    nav {
-      background-color: #111;
-      padding: 10px 20px;
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    nav a {
+    header .nav-links a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
       font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    header .nav-links a:hover {
+      color: #ff0000;
     }
 
     .hero {
@@ -62,6 +58,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-top: 60px;
     }
 
     .hero h2 {
@@ -71,7 +68,10 @@
       text-shadow: 2px 2px 8px black;
       margin-bottom: 20px;
       position: absolute;
-      top: 20px;
+      top: -60px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 0;
     }
 
     .hero h1 {
@@ -93,6 +93,15 @@
       border: none;
     }
 
+    section h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 2.5rem;
+      color: #ff0000;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
     footer {
       background: #111;
       text-align: center;
@@ -110,14 +119,13 @@
       <a href="http://www.facebook.com/profile.php?id=61556730774647" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
       <a href="https://www.youtube.com/@DRVYN_OFFICIAL" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     </div>
+    <div class="nav-links">
+      <a href="#bio">Bio</a>
+      <a href="#music">Music</a>
+      <a href="#video">Video</a>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
-
-  <nav>
-    <a href="#bio">Bio</a>
-    <a href="#music">Music</a>
-    <a href="#video">Video</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
   <section class="hero">
     <h2>DRVYN | OFFICIAL BAND SITE</h2>
