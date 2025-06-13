@@ -101,7 +101,7 @@
       text-shadow: 2px 2px 8px black;
       margin-bottom: 20px;
       position: absolute;
-      top: -60px;
+      top: -40px;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 10px 0;
@@ -140,6 +140,47 @@
       line-height: 1.6;
     }
 
+    .shows-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .show-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #ff0000;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .show-item:hover {
+      transform: translateX(10px);
+    }
+
+    .show-date {
+      font-size: 1.2rem;
+      color: #ff0000;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .show-venue {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .show-location {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .show-time {
+      color: #ccc;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
     /* Responsive Design */
     @media screen and (max-width: 768px) {
       .hero {
@@ -149,7 +190,7 @@
 
       .hero h2 {
         font-size: 1.5rem;
-        top: -50px;
+        top: -30px;
       }
 
       section {
@@ -162,6 +203,18 @@
 
       section p {
         font-size: 1rem;
+      }
+
+      .show-item {
+        padding: 15px;
+      }
+
+      .show-venue {
+        font-size: 1.2rem;
+      }
+
+      .show-date {
+        font-size: 1.1rem;
       }
     }
 
@@ -205,7 +258,19 @@
 
   <section id="bio">
     <h2>About the Band</h2>
-    <p>DRVYN consists of Burton, Ohio natives, Cody Charvat (Guitar), Donovan Springer (Bass / Vocals), Aaron Pawlak (Drums), and Ethan Alan (Vocals / Guitar). DRVYN is on a mission to rock the socks off of beings across the universe. DRVYN doesn't care about coloring inside the lines when it comes to their music. They are tired of being DRVYN by the strings of those in control. It's time to cut the strings and take back control!</p>
+    <p>DRVYN consists of Burton, Ohio natives, Cody Charvat (Guitar), Donovan Springer (Bass / Vocals), Aaron Pawlak (Drums), Deano (Keys),and Ethan Alan (Vocals / Guitar). DRVYN is on a mission to rock the socks off of beings across the universe. DRVYN doesn't care about coloring inside the lines when it comes to their music. They are tired of being DRVYN by the strings of those in control. It's time to cut the strings and take back control! Come see us at a show near you! Follow us on all our social media platforms for updates and exciting content!</p>
+  </section>
+
+  <section id="shows">
+    <h2>Upcoming Shows</h2>
+    <div class="shows-container">
+      <div class="show-item">
+        <div class="show-date">October 4, 2025</div>
+        <div class="show-venue">Wild Maple Music Fest</div>
+        <div class="show-location">Auburn, OH</div>
+        <div class="show-time">Time: TBD</div>
+      </div>
+    </div>
   </section>
 
   <section id="music">
