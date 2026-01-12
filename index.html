@@ -199,6 +199,33 @@
       margin-top: 5px;
     }
 
+    .show-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.show-button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 0, 0, 0.4);
+}
+
+.show-button:active {
+  transform: translateY(1px);
+}
+/*Show button for interactive links within upcoming shows blocks */
+
     /* Responsive Design */
     @media screen and (max-width: 768px) {
       .hero {
@@ -235,7 +262,15 @@
       .show-date {
         font-size: 1.1rem;
       }
+
+      /* Make "More Information" button mobile-friendly */
+  .show-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.1rem;
     }
+  }
 
     @media screen and (min-width: 769px) {
       section p {
@@ -453,7 +488,71 @@
         <div class="show-venue">Treelawn Social Club</div>
         <div class="show-location">Cleveland, Ohio</div>
         <div class="show-time">Time: 8:00 PM</div>
+
+        <a href="https://www.ticketweb.com/event/cyxez-drvyn-kabbu-treelawn-social-club-tickets/14665353"
+         class="show-button"
+         target="_blank" 
+         rel="noopener noreferrer">
+        More Information
+        </a>  
       </div>
+
+      <div class="show-item">
+        <div class="show-date">January 23, 2026</div>
+        <div class="show-venue">Rock 889 Interview</div>
+        <div class="show-location">CLASSIFIED</div>
+        <div class="show-time">Time: TBD</div>
+
+        <a href="https://wp.rock889.com/streaming"
+         class="show-button"
+         target="_blank" 
+         rel="noopener noreferrer">
+        More Information
+        </a>  
+      </div>
+
+      <div class="show-item">
+        <div class="show-date">January 24, 2026</div>
+        <div class="show-venue">Coffee Corners (Ethan Alan)</div>
+        <div class="show-location">Burton, Ohio</div>
+        <div class="show-time">Time: 7:00 PM</div>
+
+        <a href="https://www.instagram.com/ethan_alan_music/"
+         class="show-button"
+         target="_blank" 
+         rel="noopener noreferrer">
+        More Information
+        </a>  
+      </div>
+
+      <div class="show-item">
+        <div class="show-date">February 21, 2026</div>
+        <div class="show-venue">Riverside Brewing Co. (Ethan Alan)</div>
+        <div class="show-location">Cambridge Springs, PA</div>
+        <div class="show-time">Time: 6:00 PM</div>
+
+        <a href="https://www.instagram.com/ethan_alan_music/"
+         class="show-button"
+         target="_blank" 
+         rel="noopener noreferrer">
+        More Information
+        </a>  
+      </div>
+
+      <div class="show-item">
+        <div class="show-date">March 14, 2026</div>
+        <div class="show-venue">Coffee Corners (Ethan Alan)</div>
+        <div class="show-location">Burton, Ohio</div>
+        <div class="show-time">Time: 7:00 PM</div>
+
+        <a href="https://www.instagram.com/ethan_alan_music/"
+         class="show-button"
+         target="_blank" 
+         rel="noopener noreferrer">
+        More Information
+        </a>  
+      </div>
+ 
     </div>
   </section>
 
