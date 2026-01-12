@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+<!--DECLARE DOC AS HTML5-->
 <html lang="en">
 <head>
+  
+  <!--Character encoding for text-->
   <meta charset="UTF-8">
+  <!--Makes the site responsive on mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Website icon shown in browser tabs-->
   <link rel="icon" type="image/png" href="apple-touch-icon.png">
+  <!--Google font: Anton-->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!--font Awesome icon library (social icons, menue icon, etc.)-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Open Graph (for social media previews) -->
@@ -22,51 +29,60 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!--Inline CSS styling for the entire site-->
   <style>
+    /*Global page styles*/
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      scroll-behavior: smooth;
+      margin: 0; /*Removes default browser margin*/
+      font-family: Arial, sans-serif; 
+      background-color: #000; /*Black background*/
+      color: #fff; /*white text*/
+      scroll-behavior: smooth; /*smooth scrolling for anchor links*/
     }
 
+    /*Fixed navigation header at top of page*/
     header {
       background-color: #111;
       padding: 10px 20px;
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 999;
+      z-index: 999; /*Keeps header above most content*/
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    /*container for social media icons*/
     header .socials {
       display: flex;
       align-items: center;
     }
 
+    /*Individual social links*/
     header .socials a {
       color: #fff;
       margin-right: 15px;
       text-decoration: none;
       font-size: 1.5rem;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease; /*Smooth hover effect*/
     }
 
+    /*Hover color for social icons*/
     header .socials a:hover {
       color: #ff0000;
     }
 
+    /*Dropdown menu wrapper*/
     .dropdown {
       position: relative;
       display: inline-block;
     }
 
+    /*Dropdown menu content*/
     .dropdown-content {
-      display: none;
+      display: none; /*hidden by default*/
       position: absolute;
       right: 0;
       background-color: #111;
@@ -75,6 +91,7 @@
       z-index: 1000;
     }
 
+    /*Links inside dropdown menu*/
     .dropdown-content a {
       color: white;
       padding: 12px 16px;
@@ -84,15 +101,18 @@
       transition: color 0.3s ease;
     }
 
+    /*Hover effect on dropdown links*/
     .dropdown-content a:hover {
       color: #ff0000;
       background-color: rgba(255, 255, 255, 0.1);
     }
 
+    /*Show dropdown menu when hovered*/
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
+    /*hamburger menu icon styling*/
     .menu-icon {
       color: #fff;
       font-size: 1.5rem;
@@ -100,18 +120,20 @@
       margin-left: 15px;
     }
 
+    /*Hero section (top banner image area)*/
     .hero {
       position: relative;
-      background: url('drvyn-13 3.JPEG') center/cover no-repeat;
-      height: 90vh;
+      background: url('drvyn-13 3.JPEG') center/cover no-repeat; /*Full screen background image*/
+      height: 90vh; /*90% of viewport height*/
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 108px; /* 48px banner + 60px header */
+      margin-top: 108px; /* 48px banner + 60px header (pushes content below fixed banner + header)*/
     }
 
+    /*Hero subtitle banner*/
     .hero h2 {
       font-family: 'Anton', sans-serif;
       font-size: 2rem;
@@ -125,6 +147,7 @@
       padding: 10px 0;
     }
 
+    /*Hero main title*/
     .hero h1 {
       font-family: 'Anton', sans-serif;
       font-size: 5rem;
@@ -133,17 +156,20 @@
       margin-bottom: 20px;
     }
 
+    /*Shared layout for all sections*/
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 900px; /*keeps content centered and readable*/
       margin: 0 auto;
     }
 
+    /*Responsive iframes (Spotify, YouTube, etc.)*/
     iframe {
       max-width: 100%;
       border: none;
     }
 
+    /*Section headings*/
     section h2 {
       font-family: 'Anton', sans-serif;
       font-size: 2.5rem;
@@ -153,16 +179,19 @@
       text-align: center;
     }
 
+    /*Paragraph text styling*/
     section p {
       font-size: 1.1rem;
       line-height: 1.6;
     }
 
+    /*Wrapper for upcoming shows list*/
     .shows-container {
       max-width: 800px;
       margin: 0 auto;
     }
 
+    /*Individual show card*/
     .show-item {
       background-color: rgba(255, 255, 255, 0.05);
       border-left: 4px solid #ff0000;
@@ -171,10 +200,12 @@
       transition: transform 0.3s ease;
     }
 
+    /*Slide animation when hovering over show*/
     .show-item:hover {
       transform: translateX(10px);
     }
 
+    /*Date styling*/
     .show-date {
       font-size: 1.2rem;
       color: #ff0000;
@@ -182,23 +213,27 @@
       margin-bottom: 10px;
     }
 
+    /*Venue name*/
     .show-venue {
       font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 5px;
     }
 
+    /*City/State*/
     .show-location {
       color: #ccc;
       font-size: 1.1rem;
     }
 
+    /*Time text*/
     .show-time {
       color: #ccc;
       font-style: italic;
       margin-top: 5px;
     }
 
+    /*"More Information" button inside show cards*/
     .show-button {
   display: inline-block;
   margin-top: 15px;
@@ -215,30 +250,33 @@
   box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
 }
 
+/*Button hover effect*/    
 .show-button:hover {
   background-color: #ff1a1a;
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(255, 0, 0, 0.4);
 }
 
+/*Button pressed effect*/    
 .show-button:active {
   transform: translateY(1px);
 }
 /*Show button for interactive links within upcoming shows blocks */
 
-    /* Responsive Design */
+    /* Responsive Design - Mobile responsive styles*/
     @media screen and (max-width: 768px) {
+      /*Shorter hero on mobile*/
       .hero {
         height: 50vh;
         background-position: center;
         margin-top: 76px; /* 38px banner + 38px header */
       }
-
+      /*Smaller hero text*/
       .hero h2 {
         font-size: 1.5rem;
         top: -30px;
       }
-
+      /*Reduced paadding on sections*/
       section {
         padding: 40px 15px;
       }
@@ -263,7 +301,7 @@
         font-size: 1.1rem;
       }
 
-      /* Make "More Information" button mobile-friendly */
+      /* Make "More Information" button mobile-friendly */ 
   .show-button {
     width: 100%;
     text-align: center;
@@ -272,7 +310,7 @@
     }
   }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 769px) { 
       section p {
         font-size: 1.2rem;
       }
@@ -285,7 +323,7 @@
       color: #666;
       font-size: 0.9rem;
     }
-
+    
     .contact-button {
       display: inline-block;
       background-color: #ff0000;
